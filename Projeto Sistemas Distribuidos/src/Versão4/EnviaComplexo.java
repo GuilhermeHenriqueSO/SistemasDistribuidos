@@ -7,7 +7,7 @@ public class EnviaComplexo {
 
 	public static void main(String args[]) {
 		try {
-			Socket s = new Socket("localhost", 6789);
+			Socket s = new Socket("25.2.118.222", 9000);
 			ObjectOutputStream out = new ObjectOutputStream(new DataOutputStream(s.getOutputStream()));
 			Complexo c = new Complexo();
 			c.a = 3;

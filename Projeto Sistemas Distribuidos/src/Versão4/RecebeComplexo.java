@@ -5,18 +5,18 @@ import java.net.*;
 
 public class RecebeComplexo {
 
-	public static void main(String[] args) {
-		try {
-			ServerSocket ss = new ServerSocket(6789);
-			Socket s = ss.accept();
-			ObjectInputStream in = new ObjectInputStream(new DataInputStream(s.getInputStream()));
-			Complexo c = (Complexo) in.readObject();
-			System.out.println("Modulo = " + c.modulo());
-			s.close();
-		}
+public static void main(String[] args)
+    
+{  try
+        {  ServerSocket ss = new ServerSocket(9000);
+           Socket s = ss.accept();
+           ObjectInputStream in = new ObjectInputStream(new DataInputStream(s.getInputStream()));
+           Complexo c = (Complexo) in.readObject();
+           System.out.println("Módulo = " + c.modulo());
+           s.close();
+       }
 
-		catch (Exception e) {
-		}
+        catch(Exception e){}
 
-	}
+    }
 }
